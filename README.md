@@ -7,5 +7,4 @@ In src 1. main :- contain actual source code
           b. scala/test :- contains the actual galileosky logical code
        2. test :- contains the unit testing code part for a single record
        
-       
  
