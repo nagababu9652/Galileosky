@@ -13,4 +13,6 @@ In src directory
        2. test :- contains the unit testing code part for a single record
        
        
+       
+Note: iot_decoderService.scala and iot_decoderServer.scala was not implemented yet
  
