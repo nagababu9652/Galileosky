@@ -2,7 +2,9 @@
 
 The naming conversion was little bit odd. So I am mentioning this.
 
-In src 1. main :- contain actual source code
+In src directory
+
+      1. main :- contain code
 
           a. protobut :- contain the proto's for generating the case classes
           
