@@ -20,8 +20,6 @@ object PureScalaGalileosky extends GalileoskyMapV2 {
   var Str = ""
 
 
-
-
   //**************** functions ****************************
 
   def ToInt(str_to_convert: String, endian: String = "no",div: Int=1): BigInt = {
@@ -78,12 +76,6 @@ object PureScalaGalileosky extends GalileoskyMapV2 {
   val ptrInc: Int => Int = (n: Int)=> {
     pointer + (n*2)
   }
-
-
-
-
-
-
 
 
   //**************** function for matching the cases ****************************
