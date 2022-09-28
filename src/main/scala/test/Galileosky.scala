@@ -12,7 +12,6 @@ object Galileosky extends GalileoskyMapV2 {
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   var pointer = 0
   var result = ""
-  var match1: Any = ""
   var map: scala.collection.immutable.ListMap[String, Any] = scala.collection.immutable.ListMap[String,Any]()
   var recordsmap: scala.collection.immutable.ListMap[Int,Map[String,Any]] = scala.collection.immutable.ListMap[Int,Map[String,Any]]()
   var String_len = 0

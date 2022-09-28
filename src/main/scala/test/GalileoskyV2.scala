@@ -4,16 +4,12 @@ import org.apache.log4j.Logger
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{col, from_json, udf}
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
-
 import scala.annotation.tailrec
-import scala.util.control.Breaks._
 
-
-object PureScalaGalileosky extends GalileoskyMapV2 {
+object GalileoskyV2 extends GalileoskyMapV2 {
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   var pointer = 0
   var result = ""
-  var match1: Any = ""
   var map: scala.collection.immutable.ListMap[String, Any] = scala.collection.immutable.ListMap[String,Any]()
   var recordsmap: scala.collection.immutable.ListMap[Int,Map[String,Any]] = scala.collection.immutable.ListMap[Int,Map[String,Any]]()
   var String_len = 0
