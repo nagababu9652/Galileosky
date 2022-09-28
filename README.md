@@ -16,3 +16,4 @@ In src directory
        
 Note: iot_decoderService.scala and iot_decoderServer.scala was not implemented yet
  
+Dock-kub contains the config files for creating pod and service for scalapb-grpc-service image
