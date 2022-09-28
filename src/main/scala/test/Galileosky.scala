@@ -264,7 +264,7 @@ object Galileosky extends GalileoskyMapV2 {
                 val exttag = Str.substring(pointer, ptrInc(2)).trim.replaceAll(" ","")
                 pointer = ptrInc(2) //INCREMENT TWO BYTES
                 try{
-                  h(exttag)()
+                  MapOfTAgs(exttag)()
                 }
                 catch {
                   case e: Exception => println(e)
@@ -273,7 +273,7 @@ object Galileosky extends GalileoskyMapV2 {
               break
             }
             try{
-              h(tag)()
+              MapOfTAgs(tag)()
             }
             catch {
               case e: Exception => println(e)

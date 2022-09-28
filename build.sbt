@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
     name := "untitled"
   )
 
+
 // https://mvnrepository.com/artifact/org.apache.spark/spark-core
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.1.3"
 

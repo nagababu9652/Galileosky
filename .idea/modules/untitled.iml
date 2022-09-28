@@ -8,9 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/protobuf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/src_managed/main/scalapb/com" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/src_managed/main/scalapb/v1" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/src_managed/main/scalapb" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.12/src_managed/main" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
       <excludeFolder url="file://$MODULE_DIR$/../../project/target" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/global-logging" />

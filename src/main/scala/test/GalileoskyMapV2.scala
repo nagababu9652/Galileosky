@@ -25,7 +25,7 @@ class GalileoskyMapV2 {
     case _ => ""
   }
 
-  val h = Map(
+  val MapOfTAgs = Map(
     "01" -> (()=>tagfunction(2, "Tag Length", conversiontype.ToInt,"yes")),
     "02" -> (()=>tagfunction(1, "Firmware version", conversiontype.ToInt)),
     "03" -> (()=>tagfunction(15, "IMEI", conversiontype.ToASCII)),
