@@ -116,7 +116,7 @@ object GalileoskyV2 extends GalileoskyMapV2 {
       val tempstr = Str.substring(pointer, ptrInc(len) ).trim
       pointer= ptrInc(len)
       var res = LittleEdianform(tempstr)
-      res = "Temperature " + SignedByte(res.substring(0,2)) + ", Fuel level" + ToInt(res.substring(2,6),"no")
+      res = "Temperature " + SignedByte(res.substring(0,2)) + ", Fuel level" + ToInt(res.substring(2,6))
       map += (TagName -> res)
       res
     case conversiontype.ExtTempSensor =>
@@ -219,7 +219,7 @@ object GalileoskyV2 extends GalileoskyMapV2 {
 
 
   @tailrec
-  def parseExtTag(recordDataStart: Int, ext_len: String): Int = {
+  final def parseExtTag(recordDataStart: Int, ext_len: String): Int = {
     if (!(pointer - recordDataStart < BigInt(LittleEdianform(ext_len), 16) * 2)) return 1
     val exttag = Str.substring(pointer, ptrInc(2)).trim.replaceAll(" ", "")
     pointer = ptrInc(2) //INCREMENT TWO BYTES
@@ -233,7 +233,7 @@ object GalileoskyV2 extends GalileoskyMapV2 {
   }
 
   @tailrec
-  def parseAllTags(tagdataStartPnt: Int, taglen: BigInt): Any = {
+  final def parseAllTags(tagdataStartPnt: Int, taglen: BigInt): Any = {
     if (!((pointer - tagdataStartPnt) < taglen * 2)) return 1
     val tag = Str.substring(pointer, pointer + 2).trim
     pointer = pointer + 2
@@ -260,7 +260,7 @@ object GalileoskyV2 extends GalileoskyMapV2 {
   }
 
   @tailrec
-  def ParseRecords(tagdataStartPnt: Int, taglen: BigInt, record: Int): Int ={
+  final def ParseRecords(tagdataStartPnt: Int, taglen: BigInt, record: Int): Int ={
     var rc =record
     if (!((pointer - tagdataStartPnt ) < taglen * 2)) return rc
     parseAllTags(tagdataStartPnt, taglen)
