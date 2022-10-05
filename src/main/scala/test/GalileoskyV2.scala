@@ -6,7 +6,7 @@ import org.apache.spark.sql.functions.{col, from_json, udf}
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
 import scala.annotation.tailrec
 
-object GalileoskyV2 extends GalileoskyMapV2 {
+object GalileoskyV2 extends GalileoskyMapV2 with Serializable {
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   var pointer = 0
   var result = ""
