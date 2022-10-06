@@ -20,10 +20,8 @@ object conversiontype extends Enumeration{
   val NoChange: conversiontype.Value = Value("NoChange")
 }
 
-class GalileoskyMapV2 {
-  def tagfunction(len: Int, TagName: String, ConvertionFun: conversiontype.Value, LittleEndian: String = "no", div: Int = 1): Any = ConvertionFun match {
-    case _ => ""
-  }
+trait GalileoskyMapV2 {
+  def tagfunction(len: Int, TagName: String, ConvertionFun: conversiontype.Value, LittleEndian: String = "no", div: Int = 1): Any
 
   val MapOfTAgs: Map[String, () => Any] = Map(
     "01" -> (()=>tagfunction(2, "Tag Length", conversiontype.ToInt,"yes")),
